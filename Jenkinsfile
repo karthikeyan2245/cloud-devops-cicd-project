@@ -2,11 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Code') {
-            steps {
-                git 'https://github.com/karthikeyan2245/cloud-devops-cicd-project.git'
-            }
-        }
 
         stage('Build Docker Image') {
             steps {
