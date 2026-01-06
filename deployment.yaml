@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloud-devops-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloud-devops
+  template:
+    metadata:
+      labels:
+        app: cloud-devops
+    spec:
+      containers:
+      - name: nginx-app
+        image: 160626951666.dkr.ecr.ap-south-1.amazonaws.com/cloud-devops-app:latest
+        ports:
+        - containerPort: 80
